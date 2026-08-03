@@ -39,14 +39,15 @@
   }
   img{max-width:100%;display:block;}
   .wrap{max-width:1080px;margin:0 auto;padding:0 24px;}
+  .wrap-to{display: flex; justify-content:center; align-items:center;margin:0 auto;padding:0 24px;}
   a.btn{
     display:inline-flex;align-items:center;gap:10px;
     background:var(--sage);
     color:#fff;
     font-family:'Baloo 2',sans-serif;
     font-weight:700;
-    font-size:1.15rem;
-    padding:18px 34px;
+    font-size:1.0rem;
+    padding:18px 25px;
     border-radius:100px;
     text-decoration:none;
     box-shadow:0 10px 24px rgba(63,174,122,.35);
@@ -99,13 +100,13 @@
   }
   .hero-grid{
     display:grid;
-    grid-template-columns:1.15fr .85fr;
+    grid-template-columns:0.5fr .85fr;
     gap:40px;
     align-items:center;
   }
   @media (max-width:860px){ .hero-grid{grid-template-columns:1fr; text-align:center;} }
   .hero h1{
-    font-size:2.7rem;
+    font-size:2.0rem;
     font-weight:800;
   }
   @media (max-width:860px){ .hero h1{font-size:2.1rem;} }
@@ -122,7 +123,7 @@
     border-radius:32px;
     overflow:hidden;
   }
-  .hero-photo img{border-radius:32px;}
+  .hero-photo video{border-radius:32px;width: full;height: 300px;}
   .price-badge{
     position:absolute;
     bottom:-18px; right:-14px;
@@ -321,11 +322,12 @@
   }
   .stack-row span:last-child{color:#C7CEE8;}
   .stack-total{
-    display:flex; justify-content:space-between; align-items:center;
+    display:flex; justify-content:space-between; align-items:center; flex-direction: column;
     margin-top:24px;
     padding-top:20px;
   }
   .stack-total .from{color:#9AA2BE; text-decoration:line-through; font-size:1.1rem;}
+  .stack-total .from-to{color:#9AA2BE; font-size:1.1rem;}
   .stack-total .to{
     font-family:'Baloo 2',sans-serif;
     font-size:2.4rem;
@@ -388,7 +390,7 @@
     border-radius:var(--radius);
     margin:0 24px 40px;
   }
-  .final img{border-radius:24px; max-width:420px; margin:0 auto 30px;}
+  .final img{border-radius:24px; max-width: 360px; margin:0 auto 30px; max-height: 230px;}
   .final h2{color:#fff; font-size:2.2rem; max-width:22ch; margin:0 auto 16px;}
   .final p{color:#D9E4FF; max-width:52ch; margin:0 auto 34px; font-size:1.08rem;}
   .final .btn{background:var(--gold); color:var(--navy); box-shadow:0 12px 26px rgba(0,0,0,.2);}
@@ -410,10 +412,10 @@
         <span class="eyebrow">Para mães e pais de crianças com TEA</span>
         <h1>Você já se sentiu <span class="hl">sozinho(a)</span> tentando estimular o desenvolvimento do seu filho autista?</h1>
         <p class="lead">Existe um caminho depois do diagnóstico — com método, acolhimento e atividades prontas para aplicar hoje mesmo, sem cursos caros e sem complicação.</p>
-        <a class="btn" href="#oferta">Quero conhecer o Além do Diagnóstico →</a>
+        <a class="btn" href="https://pay.kiwify.com.br/X9nDGAh" target="_blank">Quero conhecer o Além do Diagnóstico →</a>
       </div>
       <div class="hero-photo">
-        <img src="img/mae-preocupada.png" alt="Mãe pensativa observando o filho brincar">
+        <video src="assets/video.mp4" controls infinite alt="Mãe pensativa observando o filho brincar">
         <div class="price-badge">7 materiais<br>em 1 só lugar</div>
       </div>
     </div>
@@ -423,7 +425,7 @@
 <section class="pain">
   <div class="wrap">
     <div class="pain-grid">
-      <img src="img/sem-metodo.png" alt="Mãe e filho frustrados sem saber como agir">
+      <img src="assets/Segundaimagem.png" alt="Mãe e filho frustrados sem saber como agir">
       <div>
         <span class="eyebrow" style="background:#FBDAD3;color:#B23A22;">O que pesa no dia a dia</span>
         <h2>Você não está sozinho(a) nisso.</h2>
@@ -447,7 +449,7 @@
         <h2>O diagnóstico é o início — não o limite.</h2>
         <p>O <strong>Além do Diagnóstico</strong> reúne, num só pacote, o entendimento que você precisa sobre o TEA e as ferramentas práticas para aplicar em casa, no ritmo do seu filho — sem pressão, com carinho e consistência.</p>
       </div>
-      <img src="img/com-metodo.png" alt="Mãe e filho fazendo atividade juntos, sorrindo">
+      <img src="assets/Quartaimagem.png" alt="Mãe e filho fazendo atividade juntos, sorrindo">
     </div>
   </div>
 </section>
@@ -480,9 +482,9 @@
   <div class="wrap">
     <span class="eyebrow">O que você recebe</span>
     <h2>Além do Diagnóstico</h2>
-    <p class="sub">Um conjunto de 4 e-books escritos para acolher e orientar, com o método, o entendimento e as atividades que faltavam.</p>
+    <p class="sub">Um conjunto de 3 e-books escritos para acolher e orientar, com o método, o entendimento e as atividades que faltavam.</p>
     <div class="showcase-photo">
-      <img src="img/crianca-ebooks.png" alt="Criança sorrindo com os e-books flutuando ao lado">
+      <img src="assets/Oitavaimagem.png" alt="Criança sorrindo com os e-books flutuando ao lado">
     </div>
 
     <div class="ebook-grid">
@@ -501,11 +503,6 @@
         <h3>O Início da Jornada</h3>
         <p>Suporte emocional e dicas práticas para os primeiros passos depois do diagnóstico.</p>
       </div>
-      <div class="ebook-card">
-        <div class="ebook-num">E-BOOK 04</div>
-        <h3>Atividades de Estimulação Cognitiva</h3>
-        <p>Exercícios prontos para imprimir: linguagem, raciocínio, coordenação e mais.</p>
-      </div>
     </div>
   </div>
 </section>
@@ -520,7 +517,7 @@
 
     <div class="bonus-list">
       <div class="bonus-row">
-        <img src="img/bonus-atividades.png" alt="Bônus: 40 atividades de estimulação cognitiva">
+        <img src="assets/estimulação.png" alt="Bônus: 40 atividades de estimulação cognitiva">
         <div>
           <span class="bonus-tag">Bônus #1</span>
           <h3>40 Atividades de Estimulação Cognitiva</h3>
@@ -530,7 +527,7 @@
       </div>
 
       <div class="bonus-row">
-        <img src="img/bonus-labirinto.png" alt="Bônus: 50 jogos de labirinto">
+        <img src="assets/Décimaprimeiraimagem.png" alt="Bônus: 50 jogos de labirinto">
         <div>
           <span class="bonus-tag">Bônus #2</span>
           <h3>50 Jogos de Labirinto</h3>
@@ -540,7 +537,7 @@
       </div>
 
       <div class="bonus-row">
-        <img src="img/bonus-sudoku.png" alt="Bônus: 100 jogos de sudoku">
+        <img src="assets/sudoku.png" alt="Bônus: 100 jogos de sudoku">
         <div>
           <span class="bonus-tag">Bônus #3</span>
           <h3>100 Jogos de Sudoku</h3>
@@ -550,7 +547,7 @@
       </div>
 
       <div class="bonus-row">
-        <img src="img/bonus-recompensa.png" alt="Bônus: tabela de recompensa personalizada">
+        <img src="assets/Décimaterceiraimagem.png" alt="Bônus: tabela de recompensa personalizada">
         <div>
           <span class="bonus-tag">Bônus #4</span>
           <h3>Tabela de Recompensa Personalizada</h3>
@@ -560,7 +557,7 @@
       </div>
 
       <div class="bonus-row">
-        <div class="bonus-icon-frame">🗓️</div>
+        <img src="assets/rotinavisual.png" alt="Bônus: tabela de recompensa personalizada">
         <div>
           <span class="bonus-tag">Bônus #5</span>
           <h3>Kit de Rotina Visual</h3>
@@ -570,7 +567,8 @@
       </div>
 
       <div class="bonus-row">
-        <div class="bonus-icon-frame">🙂</div>
+        <img src="assets/emoções.png" alt="Bônus: tabela de recompensa personalizada">
+        <div>
         <div>
           <span class="bonus-tag">Bônus #6</span>
           <h3>64 Cartões Visuais de Emoção</h3>
@@ -586,7 +584,7 @@
   <div class="wrap">
     <div class="stack-card">
       <h2>Veja tudo o que você leva hoje</h2>
-      <div class="stack-row"><span>Além do Diagnóstico — 4 e-books</span><span>R$147</span></div>
+      <div class="stack-row"><span>Além do Diagnóstico — 3 e-books</span><span>R$147</span></div>
       <div class="stack-row"><span>Bônus #1 · 40 Atividades Cognitivas</span><span>R$37</span></div>
       <div class="stack-row"><span>Bônus #2 · 50 Jogos de Labirinto</span><span>R$37</span></div>
       <div class="stack-row"><span>Bônus #3 · 100 Sudokus</span><span>R$37</span></div>
@@ -598,16 +596,23 @@
         <div>
           <div class="from">De R$389</div>
         </div>
-        <div class="to">R$9,64</div>
+        <div class="to">R$67,90 <span class="from-to"> a vista</span></div>
+        <div>
+          <div class="from-to">texto</div>
+        </div>
       </div>
       <div class="stack-cta">
-        <a class="btn" href="#">Sim, quero garantir meu acesso agora →</a>
+        <a class="btn" href="https://pay.kiwify.com.br/X9nDGAh" target="_blank">Sim, quero garantir meu acesso agora →</a>
         <small>Acesso imediato após a confirmação. Pagamento único.</small>
       </div>
     </div>
   </div>
 </section>
-
+<section class="guarantee">
+  <div class="wrap-to">
+  <img src="assets/segurança.png" alt="">
+  </div>
+</section>
 <section class="guarantee">
   <div class="wrap">
     <div class="guarantee-card">
@@ -643,10 +648,10 @@
 <div class="wrap">
   <section class="final">
     <div class="wrap">
-      <img src="img/familia-final.png" alt="Família sorrindo, fazendo atividade juntos">
+      <img class="img-final" src="assets/familia.png" alt="Família sorrindo, fazendo atividade juntos">
       <h2>Seu filho tem um potencial enorme. Ele só precisa do caminho certo.</h2>
       <p>Comece hoje a jornada além do diagnóstico — com acolhimento, método e atividades prontas para aplicar em casa.</p>
-      <a class="btn" href="#">Quero o Além do Diagnóstico agora →</a>
+      <a class="btn" href="https://pay.kiwify.com.br/X9nDGAh" target="_blank">Quero o Além do Diagnóstico agora →</a>
     </div>
   </section>
 </div>
