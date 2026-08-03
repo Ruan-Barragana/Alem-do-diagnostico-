@@ -222,14 +222,16 @@
   .showcase-photo{max-width:520px; margin:0 auto;}
 
   .ebook-grid{
-    display:grid;
+    display:flex;
+    justify-content:center;
+    align-items:center;
     grid-template-columns:repeat(4,1fr);
     gap:22px;
     margin-top:50px;
     text-align:left;
   }
-  @media (max-width:920px){ .ebook-grid{grid-template-columns:repeat(2,1fr);} }
-  @media (max-width:560px){ .ebook-grid{grid-template-columns:1fr;} }
+  @media (max-width:920px){ .ebook-grid{display:grid; grid-template-columns:repeat(2,1fr);} }
+  @media (max-width:560px){ .ebook-grid{display:grid; grid-template-columns:1fr;} }
   .ebook-card{
     background:var(--white);
     border-radius:22px;
@@ -415,7 +417,7 @@
         <a class="btn" href="https://pay.kiwify.com.br/X9nDGAh" target="_blank">Quero conhecer o Além do Diagnóstico →</a>
       </div>
       <div class="hero-photo">
-        <video src="assets/video.mp4" controls infinite alt="Mãe pensativa observando o filho brincar">
+        <video id="myAudio" src="assets/video.mp4" controls autoplay infinite muted>
         <div class="price-badge">7 materiais<br>em 1 só lugar</div>
       </div>
     </div>
@@ -522,7 +524,7 @@
           <span class="bonus-tag">Bônus #1</span>
           <h3>40 Atividades de Estimulação Cognitiva</h3>
           <p>Fortalece linguagem, coordenação e raciocínio lógico em momentos de aprendizado em família.</p>
-          <span class="bonus-value"><s>R$37</s> Grátis hoje</span>
+          <span class="bonus-value"><s>R$29,00</s> Grátis hoje</span>
         </div>
       </div>
 
@@ -532,7 +534,7 @@
           <span class="bonus-tag">Bônus #2</span>
           <h3>50 Jogos de Labirinto</h3>
           <p>Desenvolve resolução de problemas, planejamento e paciência, com um toque de diversão.</p>
-          <span class="bonus-value"><s>R$37</s> Grátis hoje</span>
+          <span class="bonus-value"><s>R$24,00</s> Grátis hoje</span>
         </div>
       </div>
 
@@ -542,7 +544,7 @@
           <span class="bonus-tag">Bônus #3</span>
           <h3>100 Jogos de Sudoku</h3>
           <p>Estimula concentração e raciocínio lógico com desafios adequados para crianças.</p>
-          <span class="bonus-value"><s>R$37</s> Grátis hoje</span>
+          <span class="bonus-value"><s>R$19,00</s> Grátis hoje</span>
         </div>
       </div>
 
@@ -552,7 +554,7 @@
           <span class="bonus-tag">Bônus #4</span>
           <h3>Tabela de Recompensa Personalizada</h3>
           <p>Reforça comportamentos positivos e ajuda a criança a desenvolver autonomia e organização.</p>
-          <span class="bonus-value"><s>R$47</s> Grátis hoje</span>
+          <span class="bonus-value"><s>R$34,00</s> Grátis hoje</span>
         </div>
       </div>
 
@@ -562,7 +564,7 @@
           <span class="bonus-tag">Bônus #5</span>
           <h3>Kit de Rotina Visual</h3>
           <p>Cartões de rotina para trazer previsibilidade ao dia a dia e reduzir momentos de crise.</p>
-          <span class="bonus-value"><s>R$47</s> Grátis hoje</span>
+          <span class="bonus-value"><s>R$29,00</s> Grátis hoje</span>
         </div>
       </div>
 
@@ -573,7 +575,7 @@
           <span class="bonus-tag">Bônus #6</span>
           <h3>64 Cartões Visuais de Emoção</h3>
           <p>Apoia a criança a identificar e comunicar o que está sentindo, de forma visual e acessível.</p>
-          <span class="bonus-value"><s>R$37</s> Grátis hoje</span>
+          <span class="bonus-value"><s>R$25,00</s> Grátis hoje</span>
         </div>
       </div>
     </div>
@@ -584,21 +586,21 @@
   <div class="wrap">
     <div class="stack-card">
       <h2>Veja tudo o que você leva hoje</h2>
-      <div class="stack-row"><span>Além do Diagnóstico — 3 e-books</span><span>R$147</span></div>
-      <div class="stack-row"><span>Bônus #1 · 40 Atividades Cognitivas</span><span>R$37</span></div>
-      <div class="stack-row"><span>Bônus #2 · 50 Jogos de Labirinto</span><span>R$37</span></div>
-      <div class="stack-row"><span>Bônus #3 · 100 Sudokus</span><span>R$37</span></div>
-      <div class="stack-row"><span>Bônus #4 · Tabela de Recompensa</span><span>R$47</span></div>
-      <div class="stack-row"><span>Bônus #5 · Kit de Rotina Visual</span><span>R$47</span></div>
-      <div class="stack-row"><span>Bônus #6 · 64 Cartões de Emoção</span><span>R$37</span></div>
+      <div class="stack-row"><span>Além do Diagnóstico — 3 e-books</span><span>R$137,90</span></div>
+      <div class="stack-row"><span>Bônus #1 · 40 Atividades Cognitivas</span><span>R$29,00</span></div>
+      <div class="stack-row"><span>Bônus #2 · 50 Jogos de Labirinto</span><span>R$24,00</span></div>
+      <div class="stack-row"><span>Bônus #3 · 100 Sudokus</span><span>R$19,00</span></div>
+      <div class="stack-row"><span>Bônus #4 · Tabela de Recompensa</span><span>R$34,00</span></div>
+      <div class="stack-row"><span>Bônus #5 · Kit de Rotina Visual</span><span>R$29,00</span></div>
+      <div class="stack-row"><span>Bônus #6 · 64 Cartões de Emoção</span><span>R$25,00</span></div>
 
       <div class="stack-total">
         <div>
-          <div class="from">De R$389</div>
+          <div class="from">De R$297,90</div>
         </div>
         <div class="to">R$67,90 <span class="from-to"> a vista</span></div>
         <div>
-          <div class="from-to">texto</div>
+          <div class="from-to">Ou até 5x de R$13,58</div>
         </div>
       </div>
       <div class="stack-cta">
@@ -661,4 +663,7 @@
 </footer>
 
 </body>
+<script>
+   const video = document.getElementById("myAudio"); video.volume = 0.1; window.addEventListener("load", () => { video.play().catch(() => { console.log("O navegador bloqueou o autoplay com áudio."); }); });
+</script>
 </html>
