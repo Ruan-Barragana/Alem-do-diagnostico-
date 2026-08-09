@@ -420,7 +420,27 @@
         <a class="btn" href="https://pay.kiwify.com.br/X9nDGAh" target="_blank">Quero conhecer o Triologia do Entendimento Autista →</a>
       </div>
       <div class="hero-photo">
-        <video id="myAudio" src="assets/video.mp4" controls autoplay infinite muted>
+       <div style="position: relative; width: 100%; max-width: 600px; margin: 0 auto;">
+
+  <video 
+    id="myAudio" 
+    src="assets/video.mp4" 
+    controls 
+    autoplay 
+    loop 
+    muted
+    style="width: 100%; border-radius: 8px; display: block;"
+  ></video>
+
+  <button 
+    id="btnAudio"
+    onclick="document.getElementById('myAudio').muted = false; this.style.display = 'none';"
+    style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); padding: 14px 24px; background-color: rgba(30, 144, 255, 0.9); color: #fff; border: none; border-radius: 50px; font-size: 16px; cursor: pointer; z-index: 10;"
+  >
+    🔊 Clique para habilitar o áudio
+  </button>
+
+</div>
         <div class="price-badge">7 materiais<br>em 1 só lugar</div>
       </div>
     </div>
